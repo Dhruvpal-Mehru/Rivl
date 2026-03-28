@@ -59,7 +59,3 @@ Competitive analysis is a **$5B+ market**. Similarweb, Crayon, and Klue give you
 
 *Your competitor's worst nightmare just got a deploy button.*
 ```
-
-**GitHub topics to add:**
-```
-rivl, ai, gemini, nextjs, tailwindcss, nexlayer, hackathon, competitive-analysis, web-design, ai-agent, google-search-grounding, hacklanta
