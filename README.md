@@ -51,10 +51,6 @@ docker push ttl.sh/rivl:1d
 
 Competitive analysis is a **$5B+ market**. Similarweb, Crayon, and Klue give you reports. Rivl gives you a **working alternative**. Target users: founders doing market research, agencies pitching redesigns, product managers evaluating competitor UX.
 
-## Built for
-
-🏆 Hacklanta 2026 — Nexlayer "All-In" Startup Track
-
 ---
 
 *Your competitor's worst nightmare just got a deploy button.*
