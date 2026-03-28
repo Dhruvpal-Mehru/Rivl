@@ -1,6 +1,6 @@
 # Rivl
 
-**Outbuild any product in 90 seconds.**
+**Outbuild any product in just a few minutes.**
 
 Rivl is an AI-powered competitive analysis engine that doesn't just critique websites — it rebuilds them better. Paste any URL, pick your pettiness level, and watch as three AI models research, roast, and redesign the site in real-time.
 
