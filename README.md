@@ -58,4 +58,3 @@ Competitive analysis is a **$5B+ market**. Similarweb, Crayon, and Klue give you
 ---
 
 *Your competitor's worst nightmare just got a deploy button.*
-```
