@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900&f[]=satoshi@300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --rivl-black: #0A0A0B;
+  --rivl-dark: #111113;
+  --rivl-card: #18181B;
+  --rivl-border: #27272A;
+  --rivl-muted: #71717A;
+  --rivl-red: #EF4444;
+  --rivl-green: #22C55E;
+  --rivl-accent: #F97316;
+  --rivl-white: #FAFAFA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--rivl-black);
+  color: var(--rivl-white);
+  font-family: 'Satoshi', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--rivl-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rivl-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rivl-muted);
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.15), 0 0 60px rgba(239, 68, 68, 0.05);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 60px rgba(34, 197, 94, 0.05);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.15), 0 0 60px rgba(249, 115, 22, 0.05);
+}
+
+/* Scan line animation */
+.scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--rivl-accent), transparent);
+  animation: scan 2.5s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+/* Typewriter cursor */
+.cursor-blink::after {
+  content: '█';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Grid pattern background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(39, 39, 42, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39, 39, 42, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gradient text */
+.text-gradient-rivl {
+  background: linear-gradient(135deg, #F97316, #EF4444, #F97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Score bar animation */
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--score); }
+}
+
+.score-bar {
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+/* Comparison card hover */
+.comparison-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comparison-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Pettiness slider custom styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--rivl-border);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--rivl-accent);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+}

@@ -1,0 +1,11 @@
+application:
+  name: rivl
+  pods:
+    - name: rivl-app
+      image: ttl.sh/rivl:1d
+      path: /
+      servicePorts:
+        - 3000
+      vars:
+        GEMINI_API_KEY: "AIzaSyBLzXU8Qrba4LK0MFYp9BTbsa-LudISSRs"
+        NODE_ENV: "production"
