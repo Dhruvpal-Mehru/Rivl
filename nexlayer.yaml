@@ -7,5 +7,5 @@ application:
       servicePorts:
         - 3000
       vars:
-        GEMINI_API_KEY: "AIzaSyBLzXU8Qrba4LK0MFYp9BTbsa-LudISSRs"
+        GEMINI_API_KEY: "your-gemini-key"
         NODE_ENV: "production"
